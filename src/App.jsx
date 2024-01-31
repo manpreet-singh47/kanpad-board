@@ -9,13 +9,10 @@ import { DndContext, closestCorners } from "@dnd-kit/core";
 
 function App() {
   return (
-    <>
-      <DndContext collisionDetection={closestCorners}>
-        <KanbanBoard>
-          <WorkBoard />
-        </KanbanBoard>
-      </DndContext>
-    </>
+      <KanbanBoard>
+        <WorkBoard />
+      </KanbanBoard>
+
   );
 }
 

@@ -10,12 +10,12 @@ import { CSS } from "@dnd-kit/utilities";
 const Card = ({ work, des, id }) => {
   const dispatch = useDispatch();
 
-  const { attributes, listeners, setNodeRef, transform, transition } =
-    useSortable({ work });
-  const style = {
-    transition,
-    transform: CSS.Transform.toString(transform),
-  };
+  // const { attributes, listeners, setNodeRef, transform, transition } =
+  //   useSortable({ work });
+  // const style = {
+  //   transition,
+  //   transform: CSS.Transform.toString(transform),
+  // };
 
   const handleClick = () => {
     dispatch(cardActions.removeCard({ work, id, des }));
@@ -23,10 +23,10 @@ const Card = ({ work, des, id }) => {
   return (
     <div
       className="card"
-      ref={setNodeRef}
-      style={style}
-      {...listeners}
-      {...attributes}
+      // ref={setNodeRef}
+      // style={style}
+      // {...listeners}
+      // {...attributes}
     >
       <button
         style={{
