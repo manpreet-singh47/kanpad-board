@@ -2,7 +2,7 @@ import React from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { cardHolderActions } from "../slices/CardHolder";
-import Card from "./card";
+import Card from "./Card";
 
 const WorkBoard = ({ keyy, showform }) => {
   const card = useSelector((store) => store.card);
