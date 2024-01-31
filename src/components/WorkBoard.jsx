@@ -1,13 +1,8 @@
-import React, { useState } from "react";
+import React from "react";
 import { RxCross2 } from "react-icons/rx";
 import { useDispatch, useSelector } from "react-redux";
 import { cardHolderActions } from "../slices/CardHolder";
 import Card from "./card";
-
-// import {
-//   SortableContext,
-//   verticalListSortingStrategy,
-// } from "@dnd-kit/sortable";
 
 const WorkBoard = ({ keyy, showform }) => {
   const card = useSelector((store) => store.card);
@@ -39,13 +34,12 @@ const WorkBoard = ({ keyy, showform }) => {
         >
           <RxCross2 />
         </button>
-        {/* <SortableContext items={[card]} strategy={verticalListSortingStrategy}> */}
+
         {card.map((item) =>
           keyy === item.key ? (
             <Card work={item.work} des={item.des} id={keyy} key={keyy} />
           ) : null
         )}
-        {/* </SortableContext> */}
 
         <button
           style={{
